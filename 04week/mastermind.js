@@ -53,6 +53,8 @@ function mastermind(guess) {
   solution = 'abcd'; // Comment this out to generate a random solution
   if (guess === solution) {
     return "You guessed it!";
+  } else {
+    generateHint();
   }
 }
 
