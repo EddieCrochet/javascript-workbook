@@ -9,6 +9,17 @@ let jobTypes = {
   programmer: 'Any Ship!'
 };
 
+//class represents a crew member
+//crew member should have name, job, and special skill
+//method for crew member called enter Ship
+//method should take in ship as input
+//class represents a ship
+//ship has name, type, and ability(description), crew array
+//ship constructor should ste an array called crew to be an empty array
+//ship should have a method called missionStatement
+//should return "Cant perform missio yet" if it has no crew
+//method should return ships ability if tehre is at lqeast 1 crew member
+
 // Your code here
 
 //tests
