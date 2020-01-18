@@ -33,28 +33,28 @@ function generateHint(guess) {
   var solutionArray = solution.split("");
   var correctLetterLocations = 0;
   var correctLetters = 0;
-  for (var i = 0; i <= solutionArray.length; i++) {
+  for (var i = 0; i < solutionArray.length; i++) {
     if (solutionArray[i] === guessArray[i]) {
       correctLetterLocations++;
       solutionArray[i] = null;
     }
   }
-  for (var i = 0; i <= solutionArray.length; i++) {
+  for (var i = 0; i < solutionArray.length; i++) {
     var targetIndex = solutionArray.indexOf(guessArray[i]);
     if(targetIndex > -1) {
       correctLetters++;
       solutionArray[i] = null;
     }
   }
-  return `Red: ${correctLetterLocations} - White: ${correctLetters}`;
+  return console.log(`Red: ${correctLetterLocations} - White: ${correctLetters}`);
 }
 
 function mastermind(guess) {
   solution = 'abcd'; // Comment this out to generate a random solution
   if (guess === solution) {
-    return "You guessed it!";
+    return console.log("You guessed it!");
   } else {
-    generateHint();
+    generateHint(guess);
   }
 }
 
