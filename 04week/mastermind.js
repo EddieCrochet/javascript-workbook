@@ -46,22 +46,31 @@ function generateHint(guess) {
       solutionArray[i] = null;
     }
   }
-  return console.log(`Red: ${correctLetterLocations} - White: ${correctLetters}`);
+  return `Red: ${correctLetterLocations} - White: ${correctLetters}`;
 }
 
 function mastermind(guess) {
   solution = 'abcd'; // Comment this out to generate a random solution
   if (guess === solution) {
-    return console.log("You guessed it!");
+    board = [];
+    return "You guessed it!";
   } else {
-    generateHint(guess);
+    var hint = generateHint(guess);
+    board.push(`Guess:  ${guess} Hint:  ${hint}`);
+    if(board.length >= 10) {
+      board = [];
+      return `Yout ran out of turns! 
+      The solution was ${solution}!`;
+    } else {
+      return `Guess again!`;
+    }
   }
 }
 
 
 function getPrompt() {
   rl.question('guess: ', (guess) => {
-    mastermind(guess);
+    console.log(mastermind(guess));
     printBoard();
     getPrompt();
   });
