@@ -53,12 +53,14 @@ function mastermind(guess) {
   //solution = 'abcd'; // Comment this out to generate a random solution
   if (guess === solution) {
     board = [];
+    generateSolution();
     return "You guessed it!";
   } else {
     var hint = generateHint(guess);
     board.push(`Guess:  ${guess} Hint:  ${hint}`);
     if(board.length >= 10) {
       board = [];
+      generateSolution();
       return `Yout ran out of turns! 
       The solution was ${solution}!`;
     } else {
