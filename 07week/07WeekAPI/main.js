@@ -12,7 +12,8 @@ function fetchUsers() {
     console.log("About to call api");
     //fetch and handle api results --> pass response to function that gets passed in here
     fetch("https://randomuser.me/api/?results=5").then(function(response){
-        console.log("Processiung response", response);
+        console.log("Processing response", response);
+        document.getElementsByClassName("payload").innerHTML(response);
         //do something with response once I get it
         return response.json();
     }).then(function(myJson){
