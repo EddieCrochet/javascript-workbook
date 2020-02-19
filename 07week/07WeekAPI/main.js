@@ -19,10 +19,10 @@ function fetchUsers() {
     }).then(function(myJson){
         //do something with json payload
         console.log("Processing json payload", myJson);
-        console.log(myJson.results[0].gender)
+        console.log(myJson.characters[1].name)
         console.log(document.getElementById('payload'))
         //document.getElementById("payload").innerHTML=myJson.results[0].gender;
-        document.getElementById("payload").append(myJson.results[0].gender);
+        document.getElementById("payload").append(myJson.characters);
         //pass in results of my json payload to the function that will process my users
         processUsers(myJson.results);
     });
