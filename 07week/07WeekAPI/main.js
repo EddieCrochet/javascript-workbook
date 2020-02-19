@@ -11,7 +11,7 @@ function fetchUsers() {
     //started the function that calls the api
     console.log("About to call api");
     //fetch and handle api results --> pass response to function that gets passed in here
-    fetch("https://randomuser.me/api/?results=5").then(function(response){
+    fetch("https://rickandmortyapi.com/api").then(function(response){
         console.log("Processing response", response);
         // document.getElementsByClassName("payload").innerHTML=response.results;
         //do something with response once I get it
